@@ -5,6 +5,8 @@
   import PopRecipes from './partials/PopRecipes.vue';
   import CulinaryCollection from './partials/CulinaryCollection.vue';
   import Km0 from './partials/Km0.vue';
+  import Cta from './partials/Cta.vue';
+  import Carousel from './partials/Carousel.vue';
 
   export default {
     components: {
@@ -12,6 +14,8 @@
       PopRecipes,
       CulinaryCollection,
       Km0,
+      Cta,
+      Carousel,
     },
 
     data() {
@@ -32,7 +36,11 @@
     <CulinaryCollection />
 
     <Km0 />
-    
+
+    <Cta />
+
+    <Carousel />
+
   </main>
 </template>
 
