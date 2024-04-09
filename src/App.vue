@@ -22,6 +22,8 @@
 
   <Header />
 
+  <Main />
+
   <Footer />
 
 </template>

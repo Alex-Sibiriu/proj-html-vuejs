@@ -34,12 +34,7 @@
 
       <div class="header-bottom text-center">
         <ul class="d-flex justify-content-center">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Recipes</a></li>
-          <li><a href="#">Places</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
+          <li v-for="(section, index) in store.menu" :key="index"><a :href="section.link">{{ section.name }}</a></li>
           <li><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></li>
         </ul>
       </div>

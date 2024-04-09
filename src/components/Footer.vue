@@ -30,11 +30,7 @@
 
         <div class="col border-end border-1 border-secondary">
           <ul class="sections">
-            <li><a href="#">Recipes</a></li>
-            <li><a href="#">Places</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
+            <li v-for="(section, index) in store.menu" :key="index"><a :href="section.link">{{ section.name }}</a></li>
           </ul>
         </div>
 
@@ -115,7 +111,7 @@
       font-size: 1.1rem;
       color: $secondary-text;
       .icon {
-        min-width: 40px;
+        min-width: 40px;  
       }
     }
   
