@@ -28,18 +28,17 @@
 
     <div class="row row-cols-2 px_60">
       <div class="col p-0 pe-3 d-flex flex-column">
-          <img :src="getImagePath(activeRecipe.img)" :alt="activeRecipe.title">
-  
-          <div class="active-details bg-white h-100">
-            <h3>{{ activeRecipe.title }}</h3>
-            <p class="active-tags">{{ activeRecipe.tags.join(', ') }}</p>
-  
-            <p class="pt-1 pb-3 active-description">{{ activeRecipe.description }}</p>
-  
-            <span class="recipe-btn">LEARN MORE</span>
-         
-        </div>
+        <img :src="getImagePath(activeRecipe.img)" :alt="activeRecipe.title">
 
+        <div class="active-details bg-white h-100">
+          <h3>{{ activeRecipe.title }}</h3>
+          <p class="active-tags">{{ activeRecipe.tags.join(', ') }}</p>
+
+          <p class="pt-1 pb-3 active-description">{{ activeRecipe.description }}</p>
+
+          <span class="recipe-btn fw-medium">LEARN MORE</span>
+
+        </div>
       </div>
 
       <div class="col">
@@ -74,12 +73,13 @@
         background-color: $secondary-clr;
         color: white;
         padding: 10px 30px 15px;
+        font-size: .9rem;
       }
     }
     .right-column .col {
       padding-bottom: 25px;
       &:hover img{
-        scale: 1.2;
+        scale: 1.15;
         transition: all .4s;
         box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
       }

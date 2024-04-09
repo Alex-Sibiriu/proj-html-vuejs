@@ -43,11 +43,12 @@
               <div class="separator"></div>
               <h5 class="text-uppercase text-center position-absolute bg-white top-0 start-50 translate-middle">Foodie journal</h5>
             </div>
-  
-            <Card 
-            v-for="recipe in foodieJournal" :key="recipe.id"
-            :item="recipe"
-            />
+            
+            <div v-for="recipe in foodieJournal" :key="recipe.id" class="col text-center">
+              <Card 
+              :item="recipe"
+              />
+            </div>
   
           </div>
         </div>
@@ -66,7 +67,7 @@
   margin-bottom: 500px;
   .jumbo-top {
     height: 700px;
-    background-image: url('../../assets/img/food-corner.jpg');
+    background-image: url('../../assets/img/articles/food-corner.jpg');
     background-size: cover;
     background-position: center;
     .today-box {

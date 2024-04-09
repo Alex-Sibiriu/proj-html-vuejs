@@ -29,6 +29,34 @@ export const store = reactive({
     }
   ],
 
+  socials: [
+    {
+      id: 51,
+      name: 'fa-facebook-f',
+      link: '#'
+    },
+    {
+      id: 52,
+      name: 'fa-instagram',
+      link: '#'
+    },
+    {
+      id: 53,
+      name: 'fa-x-twitter',
+      link: '#'
+    },
+    {
+      id: 54,
+      name: 'fa-youtube',
+      link: '#'
+    },
+    {
+      id: 55,
+      name: 'fa-pinterest-p',
+      link: '#'
+    },
+  ],
+
   articles: [
     {
       id: 11,
@@ -228,6 +256,27 @@ export const store = reactive({
       link: '#',
       name: 'Quick & Easy',
     },
+  ],
+
+  usersComments: [
+    {
+      id: 200,
+      userImg: 'food-corner.jpg',
+      txt: 'Food Corner: Top Japanese Restaurants for Sushi',
+      date: 'March 25th, 2019',
+    },
+    {
+      id: 200,
+      userImg: 'singapore.jpg',
+      txt: 'City Guide: Singapore',
+      date: 'February 27th, 2019',
+    },
+    {
+      id: 200,
+      userImg: 'slide1-bg-150x150.jpg',
+      txt: '6 Nutritional Tips to Help Burn Body Fat',
+      date: 'February 28th, 2019',
+    }
   ]
 
 });

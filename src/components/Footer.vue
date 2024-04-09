@@ -20,10 +20,11 @@
 
           <div class="socials mt-5">
             <ul class="d-flex p-0">
-              <li><a href="#" class="px-2"><i class="fa-brands fa-facebook-f"></i></a></li>
-              <li><a href="#" class="px-2"><i class="fa-brands fa-instagram"></i></a></li>
-              <li><a href="#" class="px-2"><i class="fa-brands fa-x-twitter"></i></a></li>
-              <li><a href="#" class="px-2"><i class="fa-brands fa-youtube"></i></a></li>
+              <li
+                v-for="social in store.socials"
+                :key="'h' + social.id"
+                v-show="social.name != 'fa-pinterest-p'">
+                <a :href="social.link" class="px-3"><i class="fa-brands" :class="social.name"></i></a></li>
             </ul> 
           </div>
         </div>

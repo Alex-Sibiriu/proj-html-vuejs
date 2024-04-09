@@ -4,12 +4,14 @@
   import Jumbotron from './partials/Jumbotron.vue';
   import PopRecipes from './partials/PopRecipes.vue';
   import CulinaryCollection from './partials/CulinaryCollection.vue';
+  import Km0 from './partials/Km0.vue';
 
   export default {
     components: {
       Jumbotron,
       PopRecipes,
       CulinaryCollection,
+      Km0,
     },
 
     data() {
@@ -29,6 +31,8 @@
 
     <CulinaryCollection />
 
+    <Km0 />
+    
   </main>
 </template>
 
