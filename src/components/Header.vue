@@ -12,11 +12,11 @@
 
 <template>
   <header>
-    <div class="container">
+    <div class="container px_60">
 
       <div class="header-top d-flex justify-content-between">
         <ul class="d-flex">
-          <li><a href="#" class="px-3 py-2">Download App <span class="orange-tag rounded-1 ms-1">iOS</span></a></li>
+          <li><a href="#" class="pe-3 py-2">Download App <span class="orange-tag rounded-1 ms-1">iOS</span></a></li>
           <li><a href="#">Advertise with us</a></li>
         </ul>
 

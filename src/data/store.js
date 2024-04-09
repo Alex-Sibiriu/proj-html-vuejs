@@ -29,7 +29,7 @@ export const store = reactive({
     }
   ],
 
-  recipes: [
+  articles: [
     {
       id: 11,
       link: '#',
@@ -92,6 +92,90 @@ export const store = reactive({
       description: 'Suspendisse at semper odio. Nam fringilla scelerisque tincidunt. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec tincidunt posuere ornare. Phasellus placerat odio non feugiat sollicitudin. Integer vitae elementum ex.',
       creator: 'admin',
       date: 'March 25th, 2019',
+    }
+  ],
+
+  recipes : [
+    {
+      id: 111,
+      link: '#',
+      img: 'Yogurt-Nan-1200x790.jpg',
+      title: 'Lunch Favourite with Salad, Naan And Beans',
+      tags: ['Bakery', 'Featured', 'Healthy', 'Latest Recipes', 'Staff Picks'],
+      description: 'Suspendisse at semper odio. Nam fringilla scelerisque tincidunt. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec tincidunt posuere ornare. Phasellus placerat odio non feugiat sollicitudin. Integer vitae elementum ex. Sed porttitor, diam eget convallis volutpat, arcu tellus facilisis nulla, id dignissim orci leo id',
+      active: true
+    },
+    {
+      id: 112,
+      link: '#',
+      img: 'r-rachel-park-366508-unsplash-min-1200x790.jpg',
+      title: 'Lunch Favourite with Salad, Naan And Beans',
+      tags: ['Bakery', 'Featured', 'Healthy', 'Latest Recipes', 'Staff Picks'],
+      description: 'Suspendisse at semper odio. Nam fringilla scelerisque tincidunt. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec tincidunt posuere ornare. Phasellus placerat odio non feugiat sollicitudin. Integer vitae elementum ex. Sed porttitor, diam eget convallis volutpat, arcu tellus facilisis nulla, id dignissim orci leo id',
+      active: false
+    },
+    {
+      id: 113,
+      link: '#',
+      img: 'r-michelle-tsang-500721-unsplash-min-1200x790.jpg',
+      title: 'Lunch Favourite with Salad, Naan And Beans',
+      tags: ['Bakery', 'Featured', 'Healthy', 'Latest Recipes', 'Staff Picks'],
+      description: 'Suspendisse at semper odio. Nam fringilla scelerisque tincidunt. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec tincidunt posuere ornare. Phasellus placerat odio non feugiat sollicitudin. Integer vitae elementum ex. Sed porttitor, diam eget convallis volutpat, arcu tellus facilisis nulla, id dignissim orci leo id',
+      active: false
+    },
+    {
+      id: 114,
+      link: '#',
+      img: 'r-maarten-van-den-heuvel-400626-unsplash-min-460x295.jpg',
+      title: 'Lunch Favourite with Salad, Naan And Beans',
+      tags: ['Bakery', 'Featured', 'Healthy', 'Latest Recipes', 'Staff Picks'],
+      description: 'Suspendisse at semper odio. Nam fringilla scelerisque tincidunt. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec tincidunt posuere ornare. Phasellus placerat odio non feugiat sollicitudin. Integer vitae elementum ex. Sed porttitor, diam eget convallis volutpat, arcu tellus facilisis nulla, id dignissim orci leo id',
+      active: false
+    },
+    {
+      id: 115,
+      link: '#',
+      img: 'r-brooke-lark-96398-unsplash-min-460x295.jpg',
+      title: 'Lunch Favourite with Salad, Naan And Beans',
+      tags: ['Bakery', 'Featured', 'Healthy', 'Latest Recipes', 'Staff Picks'],
+      description: 'Suspendisse at semper odio. Nam fringilla scelerisque tincidunt. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec tincidunt posuere ornare. Phasellus placerat odio non feugiat sollicitudin. Integer vitae elementum ex. Sed porttitor, diam eget convallis volutpat, arcu tellus facilisis nulla, id dignissim orci leo id',
+      active: false
+    },
+    {
+      id: 116,
+      link: '#',
+      img: 'quick-summer-drink-460x295.jpg',
+      title: 'Lunch Favourite with Salad, Naan And Beans',
+      tags: ['Bakery', 'Featured', 'Healthy', 'Latest Recipes', 'Staff Picks'],
+      description: 'Suspendisse at semper odio. Nam fringilla scelerisque tincidunt. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec tincidunt posuere ornare. Phasellus placerat odio non feugiat sollicitudin. Integer vitae elementum ex. Sed porttitor, diam eget convallis volutpat, arcu tellus facilisis nulla, id dignissim orci leo id',
+      active: false
+    },
+    {
+      id: 117,
+      link: '#',
+      img: 'perfect-cosmopolitan-460x295.jpg',
+      title: 'Lunch Favourite with Salad, Naan And Beans',
+      tags: ['Bakery', 'Featured', 'Healthy', 'Latest Recipes', 'Staff Picks'],
+      description: 'Suspendisse at semper odio. Nam fringilla scelerisque tincidunt. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec tincidunt posuere ornare. Phasellus placerat odio non feugiat sollicitudin. Integer vitae elementum ex. Sed porttitor, diam eget convallis volutpat, arcu tellus facilisis nulla, id dignissim orci leo id',
+      active: false
+    },
+    {
+      id: 118,
+      link: '#',
+      img: 'Mixed-fruits-1200x790.jpg',
+      title: 'Lunch Favourite with Salad, Naan And Beans',
+      tags: ['Bakery', 'Featured', 'Healthy', 'Latest Recipes', 'Staff Picks'],
+      description: 'Suspendisse at semper odio. Nam fringilla scelerisque tincidunt. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec tincidunt posuere ornare. Phasellus placerat odio non feugiat sollicitudin. Integer vitae elementum ex. Sed porttitor, diam eget convallis volutpat, arcu tellus facilisis nulla, id dignissim orci leo id',
+      active: false
+    },
+    {
+      id: 119,
+      link: '#',
+      img: 'fi2x-6-460x295.jpg',
+      title: 'Lunch Favourite with Salad, Naan And Beans',
+      tags: ['Bakery', 'Featured', 'Healthy', 'Latest Recipes', 'Staff Picks'],
+      description: 'Suspendisse at semper odio. Nam fringilla scelerisque tincidunt. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec tincidunt posuere ornare. Phasellus placerat odio non feugiat sollicitudin. Integer vitae elementum ex. Sed porttitor, diam eget convallis volutpat, arcu tellus facilisis nulla, id dignissim orci leo id',
+      active: false
     }
   ]
 

@@ -16,7 +16,7 @@
         const journalArray = [];
 
         for (let i = 0; i < 3; i++) {
-          journalArray.push(store.recipes[i])
+          journalArray.push(store.articles[i])
         }
         return journalArray
       }
@@ -35,19 +35,21 @@
         <p class="pt-3">March 25, 2019</p>
       </div>
 
-      <div id="journal" class="container bg-white position-absolute start-50 translate-middle-x">
-        <div class="row row-cols-3">
-
-          <div class="col-12 position-relative">
-            <div class="separator"></div>
-            <h5 class="text-uppercase text-center position-absolute bg-white top-0 start-50 translate-middle">Foodie journal</h5>
+      <div id="journal" class="container px_60 position-absolute start-50 translate-middle-x">
+        <div class="container bg-white">
+          <div class="row row-cols-3 px-4">
+  
+            <div class="col-12 position-relative">
+              <div class="separator"></div>
+              <h5 class="text-uppercase text-center position-absolute bg-white top-0 start-50 translate-middle">Foodie journal</h5>
+            </div>
+  
+            <Card 
+            v-for="recipe in foodieJournal" :key="recipe.id"
+            :item="recipe"
+            />
+  
           </div>
-
-          <Card 
-          v-for="recipe in foodieJournal" :key="recipe.id"
-          :item="recipe"
-          />
-
         </div>
       </div>
 
@@ -60,6 +62,8 @@
 
  @import '../../assets/scss/main';
   
+ #jumbo {
+  margin-bottom: 500px;
   .jumbo-top {
     height: 700px;
     background-image: url('../../assets/img/food-corner.jpg');
@@ -96,5 +100,6 @@
       padding-top: 40px;
     }
   }
+ }
 
 </style>

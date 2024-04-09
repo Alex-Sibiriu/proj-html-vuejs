@@ -31,7 +31,7 @@
 <style lang="scss" scoped>
   
   .card {
-    padding: 0 10px;
+    padding: 0 5px;
   }
 
 </style>
