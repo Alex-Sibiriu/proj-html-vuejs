@@ -1,3 +1,5 @@
+@import './variables';
+
 ul {
   list-style: none;
 }
@@ -9,4 +11,15 @@ a {
 img {
   max-width: 100%;
   max-height: 100%;
+}
+
+section {
+  h2 {
+    color: $primary-text;
+    letter-spacing: 2px;
+  }
+  .subtitle {
+    line-height: 1.8rem;
+    color: $secondary-text;
+  }
 }

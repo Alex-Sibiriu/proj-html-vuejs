@@ -37,7 +37,7 @@
 
       <div id="journal" class="container px_60 position-absolute start-50 translate-middle-x">
         <div class="container bg-white">
-          <div class="row row-cols-3 px-4">
+          <div class="row row-cols-3 px-4 pb-4">
   
             <div class="col-12 position-relative">
               <div class="separator"></div>

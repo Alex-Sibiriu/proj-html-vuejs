@@ -177,6 +177,57 @@ export const store = reactive({
       description: 'Suspendisse at semper odio. Nam fringilla scelerisque tincidunt. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec tincidunt posuere ornare. Phasellus placerat odio non feugiat sollicitudin. Integer vitae elementum ex. Sed porttitor, diam eget convallis volutpat, arcu tellus facilisis nulla, id dignissim orci leo id',
       active: false
     }
+  ],
+
+  plateTypes: [
+    {
+      id: 700,
+      img: 'drinks-recipes.png',
+      link: '#',
+      name: 'Drinks',
+    },
+    {
+      id: 701,
+      img: 'soups-recipes.png',
+      link: '#',
+      name: 'Soups'
+    },
+    {
+      id: 702,
+      img: 'baking-recipes.png',
+      link: '#',
+      name: 'Bakery',
+    },
+    {
+      id: 703,
+      img: 'dinner-recipes.png',
+      link: '#',
+      name: 'Dinner',
+    },
+    {
+      id: 704,
+      img: 'healthy-recipes.png',
+      link: '#',
+      name: 'Healthy',
+    },
+    {
+      id: 705,
+      img: 'staff-picks.png',
+      link: '#',
+      name: 'Staff Picks'
+    },
+    {
+      id: 706,
+      img: 'premium-recipes.png',
+      link: '#',
+      name: 'Appetisers',
+    },
+    {
+      id: 707,
+      img: 'quick-easy-recipes.png',
+      link: '#',
+      name: 'Quick & Easy',
+    },
   ]
 
 });

@@ -22,7 +22,7 @@
 
 <template>
 
-  <div id="popRecipes" class="container pb-5">
+  <section id="popRecipes" class="container">
     <h2 class="text-uppercase text-center pb-3 fs-5">Popular recipes</h2>
     <p class="subtitle text-center pb-5">Aliquam erat volutpat. Ut quis ligula a magna blandit finibus. Suspendisse<br>maximus lacus non nunc lacinia lobortis.</p>
 
@@ -51,7 +51,7 @@
       </div>
 
     </div>
-  </div>
+  </section>
 
 </template>
 
@@ -59,14 +59,7 @@
  @import '../../assets/scss/main';
   
   #popRecipes {
-    h2 {
-      color: $primary-text;
-      letter-spacing: 2px;
-    }
-    .subtitle {
-      line-height: 1.8rem;
-      color: $secondary-text;
-    }
+    padding-bottom: 180px;
     .active-details {
       padding: 40px 35px;
       .active-tags {
@@ -85,6 +78,11 @@
     }
     .right-column .col {
       padding-bottom: 25px;
+      &:hover img{
+        scale: 1.2;
+        transition: all .4s;
+        box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+      }
       img {
         height: 180px;
         width: 275px;

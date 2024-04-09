@@ -3,11 +3,13 @@
 
   import Jumbotron from './partials/Jumbotron.vue';
   import PopRecipes from './partials/PopRecipes.vue';
+  import CulinaryCollection from './partials/CulinaryCollection.vue';
 
   export default {
     components: {
       Jumbotron,
       PopRecipes,
+      CulinaryCollection,
     },
 
     data() {
@@ -20,9 +22,12 @@
 
 <template>
   <main>
+
     <Jumbotron />
 
     <PopRecipes />
+
+    <CulinaryCollection />
 
   </main>
 </template>
