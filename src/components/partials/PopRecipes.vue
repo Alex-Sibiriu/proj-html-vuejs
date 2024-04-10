@@ -11,6 +11,10 @@
       getImagePath(imgPath) {
         return new URL(`../../assets/img/recipes/${imgPath}`, import.meta.url).href
       },
+      changeActive(show) {
+        store.recipes.forEach(item => item.active = false);
+        show.active = true
+      }
     },
     computed: {
       activeRecipe() {
@@ -26,8 +30,8 @@
     <h2 class="text-uppercase text-center pb-3 fs-5">Popular recipes</h2>
     <p class="subtitle text-center pb-5">Aliquam erat volutpat. Ut quis ligula a magna blandit finibus. Suspendisse<br>maximus lacus non nunc lacinia lobortis.</p>
 
-    <div class="row row-cols-2 px_60">
-      <div class="active-recipe col p-0 pe-3 d-flex flex-column">
+    <div class="row row-cols-1 row-cols-lg-2 px_60">
+      <div class="active-recipe col p-0 pe-lg-3 pe-0 d-flex mb-3 mb-lg-0 flex-column">
         <div class="box-img position-relative">
           <img :src="getImagePath(activeRecipe.img)" :alt="activeRecipe.title">
   
@@ -36,13 +40,13 @@
               <span class="link-circle d-inline-block mb-2 text-xl-center rounded-circle bg-white">
                 <i class="fa-solid fa-link"></i>
               </span>
-              <h5>{{ activeRecipe.title }}</h5>
+              <h5 class="f-vidaloka">{{ activeRecipe.title }}</h5>
             </div>
           </a>
         </div>
 
         <div class="active-details bg-white h-100">
-          <h3>{{ activeRecipe.title }}</h3>
+          <h3 class="f-vidaloka">{{ activeRecipe.title }}</h3>
           <p class="active-tags">{{ activeRecipe.tags.join(', ') }}</p>
 
           <p class="pt-1 pb-3 active-description">{{ activeRecipe.description }}</p>
@@ -54,19 +58,25 @@
 
       <div class="col">
         <div class="row row-cols-2 right-column">
-          <div v-for="recipe in store.recipes" :key="recipe.id" v-show="!recipe.active" class="col text-end px-0 position-relative ">
+          <div
+            v-for="recipe in store.recipes"
+            :key="recipe.id"
+            v-show="!recipe.active"
+            @click="changeActive(recipe)"
+            class="col text-lg-end text-center px-1 position-relative">
             
+            <div class="position-relative box">
               <img :src="getImagePath(recipe.img)" :alt="recipe.title">
 
-              <a :href="recipe.link" class="hover-layer position-absolute top-0 end-0 d-flex flex-wrap justify-content-center align-items-center">
+              <a :href="recipe.link" class="hover-layer text-lg-end position-absolute top-0 end-0 d-flex flex-wrap justify-content-center align-items-center">
                 <div class="text-center">
-                  <span class="link-circle d-inline-block mb-2 text-xl-center rounded-circle bg-white">
+                  <span class="link-circle d-inline-block mb-2 text-center rounded-circle bg-white">
                     <i class="fa-solid fa-link"></i>
                   </span>
-                  <h5>{{ recipe.title }}</h5>
+                  <h5 class="f-vidaloka">{{ recipe.title }}</h5>
                 </div>
               </a>
-           
+            </div>
             
           </div>
         </div>
@@ -82,6 +92,9 @@
   
   #popRecipes {
     padding-bottom: 180px;
+    img {
+      width: 100%;
+    }
     .active-details {
       padding: 40px 35px;
       .active-tags {
@@ -133,12 +146,21 @@
         color: white;
       }
     }
-    &:hover > .hover-layer {
+    &:hover > .box > .hover-layer {
       opacity: 1;
       scale: 1.15;
     }
     &.active-recipe:hover .hover-layer {
       opacity: 1;
+    }
+  }
+
+
+  @media (max-width: 992px) {
+    img,
+    .hover-layer {
+      width: 100%;
+      height: 100%;
     }
   }
 </style>

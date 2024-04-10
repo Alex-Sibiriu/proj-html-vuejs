@@ -29,7 +29,7 @@
 
         <p class="tweet-txt fw-medium">Do you need sublime WordPress hosting for your next website? Take advantage of exclusive partner offers that we have secured just for you, & launch your site in seconds with <a href="#">#avada</a> on WP Engine hosting & get 30% Off this Black Friday <a href="#">bit.ly/3kjLLE2</a> <a href="#">#BlackFriday2020</a></p>
 
-        <div class="tweet-img mb-2">
+        <div class="tweet-img mb-2 pt-2">
           <img src="../../assets/img/tweet-img.jpg" alt="image">
         </div>
 
@@ -54,7 +54,7 @@
 @import '../../assets/scss/main';
 
   .tweet {
-    font-size: .85rem;
+    font-size: .87rem;
     h6 {
       color: $primary-text;
     }
@@ -67,7 +67,7 @@
     }
     .tweet-txt {
       color: $primary-text;
-      line-height: 1rem;
+      line-height: 1.1rem;
     }
     .user-img img {
       width: 35px;

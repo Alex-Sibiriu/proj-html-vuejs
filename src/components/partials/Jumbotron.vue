@@ -31,8 +31,8 @@
 
       <div class="today-box rounded-3 m-auto text-center bg-white position-relative">
         <h6 class="box-tag rounded-3 text-uppercase fw-bold text-white position-absolute top-0 start-50 translate-middle">Today's pick</h6>
-        <h2 class="fs-1">Food Corner: Top Japanese Restourants for Sushi</h2>
-        <p class="pt-3">March 25, 2019</p>
+        <h2 class="fs-1 f-vidaloka">Food Corner: Top Japanese Restourants for Sushi</h2>
+        <p class="pt-3 f-vidaloka">March 25, 2019</p>
       </div>
 
       <div id="journal" class="container px_60 position-absolute start-50 translate-middle-x">
@@ -44,9 +44,9 @@
               <h5 class="text-uppercase text-center position-absolute bg-white top-0 start-50 translate-middle">Foodie journal</h5>
             </div>
             
-            <div v-for="recipe in foodieJournal" :key="recipe.id" class="col text-center">
+            <div v-for="recipe in foodieJournal" :key="recipe.id" class="col-12 col-md text-center">
               <Card 
-              :item="recipe"
+                :item="recipe"
               />
             </div>
   
@@ -71,7 +71,8 @@
     background-size: cover;
     background-position: center;
     .today-box {
-      width: 700px;
+      width: 96%;
+      max-width: 700px;
       padding: 40px 80px;
       .box-tag {
         background-color: $secondary-clr;
@@ -84,7 +85,7 @@
     }
   }
 
-  #journal {
+   #journal {
     padding: 0 30px 45px;
     bottom: -60%;
     h5 {
@@ -102,5 +103,16 @@
     }
   }
  }
+
+ @media (max-width: 767px) {
+
+  #jumbo {
+    margin-bottom: 1100px !important;
+  }
+
+    #journal {
+      bottom: -150% !important;
+    }
+  }
 
 </style>

@@ -24,14 +24,14 @@
             <span class="link-circle d-inline-block mb-2 text-xl-center rounded-circle bg-white">
               <i class="fa-solid fa-link"></i>
             </span>
-            <h5>{{ item.title }}</h5>
+            <h5 class="f-vidaloka">{{ item.title }}</h5>
           </div>
 
         </div>
       </div>
     
       <div class="card-body">
-        <h5 class="card-title">{{ item.title }}</h5>
+        <h5 class="card-title f-vidaloka">{{ item.title }}</h5>
         <p class="card-text">By {{ item.creator }} | {{ item.date }}</p>
       </div>
     </a>

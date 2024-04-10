@@ -23,11 +23,11 @@
     <h2 class="text-uppercase text-center pb-3 fs-5">Culinary Collection</h2>
     <p class="subtitle text-center pb-5">Aliquam erat volutpat. Ut quis ligula a magna blandit finibus. Suspendisse<br>maximus lacus non nunc lacinia lobortis.</p>
 
-    <div class="types-wrapper d-flex flex-wrap">
+    <div class="types-wrapper d-flex flex-wrap justify-content-center ">
       <div v-for="filter in store.plateTypes" :key="filter.id" class="type-box">
-        <span class="d-flex flex-column bg-white justify-content-center align-items-center h-100 p-2" :href="filter.link">
+        <span class="d-flex flex-column bg-white justify-content-center align-items-center h-100 p-2 pt-4" :href="filter.link">
           <img class="object-fit-contain" :src="getImagePath(filter.img)" :alt="filter.name">
-          <a :href="filter.link" class="w-100 py-2 fs-5 fw-medium">{{ filter.name }}</a>
+          <a :href="filter.link" class="w-100 py-2 fs-6 fw-medium text-uppercase">{{ filter.name }}</a>
         </span>
       </div>
     </div>

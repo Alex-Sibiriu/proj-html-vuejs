@@ -21,11 +21,11 @@
 
  <section class="d-flex align-items-center bg-white">
   <div class="my_container text-center">
-    <h3 class="fs-2 pb-3">Subscribe <span class="is-orange">&</span> Receive A Free eBook</h3>
+    <h3 class="fs-2 pb-3 f-vidaloka">Subscribe <span class="is-orange">&</span> Receive A Free eBook</h3>
     <p class="pb-4">Aliquam erat volutpat. Ut quis ligula a magna blandit finibus. Suspendisse maximus lacus non nunc lacinia lobortis.</p>
 
     <input class="me-2 px-3" type="mail" placeholder="Insert your email...*">
-    <span class="sub-btn text-uppercase d-inline-block text-center fw-bold fs-5">Subscribe</span>
+    <a href="#" class="sub-btn text-uppercase d-inline-block text-center fw-bold fs-5">Subscribe</a>
 
     <p class="pt-4">Cras porttitor pellentesque sem eu pretium.</p>
   </div>
@@ -58,9 +58,15 @@
     }
     .sub-btn {
       background-color: $secondary-clr;
+      color: $primary-text;
       width: 220px;
       height: 55px;
       line-height: 55px;
+      transition: all .3s;
+      &:hover {
+        filter: brightness(1.2);
+        color: white;
+      }
     }
   }
  }

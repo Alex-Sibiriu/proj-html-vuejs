@@ -20,7 +20,7 @@
           <li><a href="#">Advertise with us</a></li>
         </ul>
 
-        <ul class="d-flex">
+        <ul class="d-flex p-0">
           <li
             v-for="social in store.socials"
             :key="'h' + social.id"
@@ -34,9 +34,9 @@
       </div>
 
       <div class="header-bottom text-center">
-        <ul class="d-flex justify-content-center">
-          <li v-for="(section, index) in store.menu" :key="index"><a :href="section.link">{{ section.name }}</a></li>
-          <li><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+        <ul class="d-flex flex-wrap justify-content-center">
+          <li class="my-3" v-for="(section, index) in store.menu" :key="index"><a :href="section.link">{{ section.name }}</a></li>
+          <li class="my-3"><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></li>
         </ul>
       </div>
 
@@ -49,7 +49,7 @@
  @import '../assets/scss/main';
   
   header {
-    height: 255px;
+    min-height: 255px;
     padding-top: 20px;
     .header-top
     ul:first-child {
@@ -76,7 +76,7 @@
       margin-top: 30px;
       a {
         margin: 0 35px;
-        color: $primary-text;
+        color: $secondary-text;
         font-weight: bold;
         padding-bottom: 8px;
         &:hover {

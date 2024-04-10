@@ -42,14 +42,14 @@
       </div>
     </div>
 
-    <div class="bottom-section d-flex">
+    <div class="bottom-section d-flex flex-wrap">
 
       <div class="left-column">
-        <div class="col p-0 pe-3 d-flex flex-column">
+        <div class="col p-0 pe-lg-3 d-flex flex-column">
           <img :src="getImagePath(store.articles[0].img)" :alt="store.articles[0].title">
   
           <div class="active-details bg-white">
-            <h3>{{ store.articles[0].title }}</h3>
+            <h3 class="f-vidaloka">{{ store.articles[0].title }}</h3>
             <p>By {{ store.articles[0].creator }} | {{ store.articles[0].date }}</p>
   
             <p class="pt-1 pb-3 active-description">{{ store.articles[0].description }}</p>
@@ -63,7 +63,7 @@
             </div>
           </div>
   
-          <div class="other-articles row row-cols-2">
+          <div class="other-articles row row-cols-1 row-cols-md-2">
             <div
               class="col mb-3 pb-3"
               v-for="article in store.articles"
@@ -165,6 +165,7 @@
     .active-description {
       line-height: 1.8rem;
       height: fit-content;
+      color: $primary-text;
     }
     .article-btn {
       color: $secondary-text;
@@ -276,4 +277,14 @@
     }
   }
 }
+
+
+@media (max-width: 992px) {
+  .left-column,
+  .right-column {
+    width: 100% !important;
+    padding: 0;
+  }
+}
+
 </style>

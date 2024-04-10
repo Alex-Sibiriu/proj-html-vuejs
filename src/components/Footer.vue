@@ -19,8 +19,9 @@
           <img class="logo" src="../assets/img/avada-food-logo-mob-2x.png" alt="logo">
 
           <div class="socials mt-5">
-            <ul class="d-flex p-0">
+            <ul class="d-flex flex-column flex-lg-row justify-content-center p-0">
               <li
+                class="text-center"
                 v-for="social in store.socials"
                 :key="'h' + social.id"
                 v-show="social.name != 'fa-pinterest-p'">
@@ -35,21 +36,21 @@
           </ul>
         </div>
 
-        <div class="col pe-5 border-end border-1 border-secondary">
+        <div class="col pe-lg-5 border-end border-1 border-secondary">
           <div class="contacts">
-            <h6 class="text-uppercase">Contact</h6>
-            <ul>
-              <li class="d-flex">
+            <h6 class="text-uppercase p-0 text-center">Contact</h6>
+            <ul class="ps-0 ps-lg-3">
+              <li class="d-flex flex-wrap flex-lg-nowrap text-center text-lg-start">
                 <div class="icon"><i class="fa-solid fa-location-dot"></i></div>
                 <div>775 New York Ave, Brooklyn, Kings, New York 11203</div>
               </li>
 
-              <li class="d-flex">
+              <li class="d-flex flex-wrap flex-lg-nowrap text-center text-lg-start">
                 <div class="icon"><i class="fa-solid fa-phone-flip"></i></div>
-                <div>+ 0100-505-0000</div>
+                <div class="flex-grow-1">+0100-505-0000</div>
               </li>
 
-              <li class="d-flex">
+              <li class="d-flex flex-wrap flex-lg-nowrap text-center text-lg-start">
                 <div class="icon"><i class="fa-solid fa-envelope"></i></div>
                 <div>info@your-domain.com</div>
               </li>
@@ -60,7 +61,7 @@
 
         <div class="col">
           <div class="downloads">
-            <h6 class="text-uppercase">Get our app!</h6>
+            <h6 class="text-uppercase p-0 text-center">Get our app!</h6>
             <ul>
               <li><a href="#"><img src="../assets/img/download-android.png" alt="download-android"></a></li>
               <li><a href="#"><img src="../assets/img/download-app-store.png" alt="download-app-store"></a></li>
@@ -137,5 +138,16 @@
     font-size: .8rem;
   }
 
+
+  @media (max-width: 992px) {
+
+    img,
+    .icon {
+      width: 100%;
+    }
+    .downloads ul {
+      padding: 0;
+    }
+  }
 
 </style>
