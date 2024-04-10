@@ -25,10 +25,10 @@
 
     <div class="types-wrapper d-flex flex-wrap">
       <div v-for="filter in store.plateTypes" :key="filter.id" class="type-box">
-        <a class="d-flex flex-column bg-white justify-content-center align-items-center h-100" :href="filter.link">
+        <span class="d-flex flex-column bg-white justify-content-center align-items-center h-100 p-2" :href="filter.link">
           <img class="object-fit-contain" :src="getImagePath(filter.img)" :alt="filter.name">
-          <h6>{{ filter.name }}</h6>
-        </a>
+          <a :href="filter.link" class="w-100 py-2 fs-5 fw-medium">{{ filter.name }}</a>
+        </span>
       </div>
     </div>
 
@@ -49,7 +49,7 @@
     .type-box {
       width: 265px;
       height: 175px;
-      a {
+      span {
        height: 170px;
        padding: 15px 0 25px;
        color: $primary-text;
@@ -58,12 +58,18 @@
        &:hover {
         scale: 1.2;
         box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.2);
+        a {
+          background-color: $secondary-clr;
+          color: white;
+        }
        }
        img {
-        height: 90px;
+        height: 100px;
        }
-       h6 {
-         padding-top: 10px;
+       a {
+         color: $secondary-text;
+         margin-top: auto;
+         transition: all .3s;
        }
       }
     }

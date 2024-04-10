@@ -27,8 +27,19 @@
     <p class="subtitle text-center pb-5">Aliquam erat volutpat. Ut quis ligula a magna blandit finibus. Suspendisse<br>maximus lacus non nunc lacinia lobortis.</p>
 
     <div class="row row-cols-2 px_60">
-      <div class="col p-0 pe-3 d-flex flex-column">
-        <img :src="getImagePath(activeRecipe.img)" :alt="activeRecipe.title">
+      <div class="active-recipe col p-0 pe-3 d-flex flex-column">
+        <div class="box-img position-relative">
+          <img :src="getImagePath(activeRecipe.img)" :alt="activeRecipe.title">
+  
+          <a :href="activeRecipe.link" class="hover-layer h-100 w-100 position-absolute top-0 start-0 d-flex flex-wrap justify-content-center align-items-center">
+            <div class="px-4 text-center">
+              <span class="link-circle d-inline-block mb-2 text-xl-center rounded-circle bg-white">
+                <i class="fa-solid fa-link"></i>
+              </span>
+              <h5>{{ activeRecipe.title }}</h5>
+            </div>
+          </a>
+        </div>
 
         <div class="active-details bg-white h-100">
           <h3>{{ activeRecipe.title }}</h3>
@@ -36,15 +47,27 @@
 
           <p class="pt-1 pb-3 active-description">{{ activeRecipe.description }}</p>
 
-          <span class="recipe-btn fw-medium">LEARN MORE</span>
+          <a :href="activeRecipe.link" class="recipe-btn fw-medium">LEARN MORE</a>
 
         </div>
       </div>
 
       <div class="col">
         <div class="row row-cols-2 right-column">
-          <div v-for="recipe in store.recipes" :key="recipe.id" v-show="!recipe.active" class="col text-end px-0">
-            <img :src="getImagePath(recipe.img)" :alt="recipe.title">
+          <div v-for="recipe in store.recipes" :key="recipe.id" v-show="!recipe.active" class="col text-end px-0 position-relative ">
+            
+              <img :src="getImagePath(recipe.img)" :alt="recipe.title">
+
+              <a :href="recipe.link" class="hover-layer position-absolute top-0 end-0 d-flex flex-wrap justify-content-center align-items-center">
+                <div class="text-center">
+                  <span class="link-circle d-inline-block mb-2 text-xl-center rounded-circle bg-white">
+                    <i class="fa-solid fa-link"></i>
+                  </span>
+                  <h5>{{ recipe.title }}</h5>
+                </div>
+              </a>
+           
+            
           </div>
         </div>
       </div>
@@ -80,13 +103,42 @@
       padding-bottom: 25px;
       &:hover img{
         scale: 1.15;
-        transition: all .4s;
+        transition: all .3s;
         box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
       }
       img {
         height: 180px;
         width: 275px;
       }
+    }
+  }
+
+  .col {
+    .hover-layer {
+      height: 180px;
+      width: 275px;
+      background: linear-gradient(to top, $secondary-clr, rgba(252, 116, 37, 0.7));
+      opacity: 0;
+      transition: all .3s;
+      .link-circle {
+        width: 40px;
+        aspect-ratio: 1;
+        line-height: 40px;
+        i {
+          color: $secondary-clr;
+          transform: rotate(-15deg);
+        }
+      }
+      h5 {
+        color: white;
+      }
+    }
+    &:hover > .hover-layer {
+      opacity: 1;
+      scale: 1.15;
+    }
+    &.active-recipe:hover .hover-layer {
+      opacity: 1;
     }
   }
 </style>

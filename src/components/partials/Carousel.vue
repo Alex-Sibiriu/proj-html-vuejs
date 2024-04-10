@@ -46,9 +46,9 @@
     class="mySwiper">
 
     <swiper-slide v-for="recipe in store.recipes" :key="'swiper' + recipe.id">
-      <!-- <a class="w-100 h-100" :href="recipe.link"> -->
+      <a class="w-100 h-100" :href="recipe.link">
         <img :src="getImagePath(recipe.img)" :alt="recipe.title">
-      <!-- </a> -->
+      </a>
     </swiper-slide>
   </swiper>
 

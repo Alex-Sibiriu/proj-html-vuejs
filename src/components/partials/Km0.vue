@@ -1,10 +1,12 @@
 <script>
   import {store} from '../../data/store.js';
   import Card from './Card.vue';
+  import XPost from './XPost.vue'
 
   export default {
     components: {
       Card,
+      XPost,
     },
 
     data() {
@@ -63,7 +65,7 @@
   
           <div class="other-articles row row-cols-2">
             <div
-              class="col mb-3"
+              class="col mb-3 pb-3"
               v-for="article in store.articles"
               :key="'a' + article.id"
               v-show="article != store.articles[0]">
@@ -91,7 +93,7 @@
 
           <div class="second-ad position-relative">
             <img src="../../assets/img/singapore-featured-image-1200x790.jpg" alt="ad">
-            <h5 class="text-uppercase text-center position-absolute start-0 top-50 text-white bg-black fw-medium px-3">City Guide: Singapore</h5>
+            <h5 class="text-uppercase text-center position-absolute start-0 top-50 text-white fw-medium px-3">City Guide: Singapore</h5>
             <h6 class="text-uppercase text-center text-white fw-medium"><i class="fa-solid fa-earth-americas me-2"></i>View all city guides</h6>
           </div>
         </div>
@@ -119,7 +121,7 @@
           <div class="comments-wrapper">
 
             <div v-for="comment in store.usersComments" :key="comment.id" class="comment-box d-flex">
-              <div class="user-img d-flex align-items-center flex-shrink-0  pe-2">
+              <div class="user-img d-flex align-items-center flex-shrink-0 pe-2">
                 <img class="rounded-circle" :src="getUserImagePath(comment.userImg)" alt="">
               </div>
               <div class="msg-box">
@@ -130,6 +132,8 @@
 
           </div>
         </div>
+
+        <XPost />
 
       </div>
 
@@ -189,6 +193,10 @@
     margin-bottom: 50px;
     .first-ad {
       margin-bottom: 50px;
+      img {
+        height: 420px;
+        width: 100%;
+      }
       h5 {
         font-size: 1.35rem;
         color: $primary-text;
@@ -201,6 +209,7 @@
       h5 {
         height: 50px;
         line-height: 50px;
+        background-color: rgba(0, 0, 0, 0.8);
       }
       h6 {
         height: 45px;
