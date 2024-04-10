@@ -72,12 +72,12 @@
               <Card
                 :item="article" />
             </div>
-  
-            <div class="col-12">
-              <a href="#">
-                <h2 id="load-more" class="text-uppercase text-center fs-5 py-3">Load more posts</h2>
-              </a>
-            </div>
+          </div>
+
+          <div>
+            <a href="#">
+              <h2 id="load-more" class="text-uppercase text-center fs-5 py-3">Load more posts</h2>
+            </a>
           </div>
   
         </div>
