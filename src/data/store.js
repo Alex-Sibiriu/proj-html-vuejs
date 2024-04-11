@@ -173,7 +173,7 @@ export const store = reactive({
       id: 116,
       link: '#',
       img: 'quick-summer-drink-460x295.jpg',
-      title: 'Lunch Favourite with Salad, Naan And Beans',
+      title: 'Quick Summer Drink',
       tags: ['Bakery', 'Featured', 'Healthy', 'Latest Recipes', 'Staff Picks'],
       description: 'Suspendisse at semper odio. Nam fringilla scelerisque tincidunt. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec tincidunt posuere ornare. Phasellus placerat odio non feugiat sollicitudin. Integer vitae elementum ex. Sed porttitor, diam eget convallis volutpat, arcu tellus facilisis nulla, id dignissim orci leo id',
       active: false
@@ -182,7 +182,7 @@ export const store = reactive({
       id: 117,
       link: '#',
       img: 'perfect-cosmopolitan-460x295.jpg',
-      title: 'Lunch Favourite with Salad, Naan And Beans',
+      title: 'Perfect Cosmopolitan',
       tags: ['Bakery', 'Featured', 'Healthy', 'Latest Recipes', 'Staff Picks'],
       description: 'Suspendisse at semper odio. Nam fringilla scelerisque tincidunt. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec tincidunt posuere ornare. Phasellus placerat odio non feugiat sollicitudin. Integer vitae elementum ex. Sed porttitor, diam eget convallis volutpat, arcu tellus facilisis nulla, id dignissim orci leo id',
       active: false
@@ -191,7 +191,7 @@ export const store = reactive({
       id: 118,
       link: '#',
       img: 'Mixed-fruits-1200x790.jpg',
-      title: 'Lunch Favourite with Salad, Naan And Beans',
+      title: 'Mixed Fruits',
       tags: ['Bakery', 'Featured', 'Healthy', 'Latest Recipes', 'Staff Picks'],
       description: 'Suspendisse at semper odio. Nam fringilla scelerisque tincidunt. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec tincidunt posuere ornare. Phasellus placerat odio non feugiat sollicitudin. Integer vitae elementum ex. Sed porttitor, diam eget convallis volutpat, arcu tellus facilisis nulla, id dignissim orci leo id',
       active: false
@@ -200,7 +200,7 @@ export const store = reactive({
       id: 119,
       link: '#',
       img: 'fi2x-6-460x295.jpg',
-      title: 'Lunch Favourite with Salad, Naan And Beans',
+      title: 'Light Breakfast',
       tags: ['Bakery', 'Featured', 'Healthy', 'Latest Recipes', 'Staff Picks'],
       description: 'Suspendisse at semper odio. Nam fringilla scelerisque tincidunt. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec tincidunt posuere ornare. Phasellus placerat odio non feugiat sollicitudin. Integer vitae elementum ex. Sed porttitor, diam eget convallis volutpat, arcu tellus facilisis nulla, id dignissim orci leo id',
       active: false

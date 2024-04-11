@@ -68,14 +68,14 @@
             <div class="position-relative box">
               <img :src="getImagePath(recipe.img)" :alt="recipe.title">
 
-              <a :href="recipe.link" class="hover-layer text-lg-end position-absolute top-0 end-0 d-flex flex-wrap justify-content-center align-items-center">
+              <span :href="recipe.link" class="hover-layer text-lg-end position-absolute top-0 end-0 d-flex flex-wrap justify-content-center align-items-center">
                 <div class="text-center">
-                  <span class="link-circle d-inline-block mb-2 text-center rounded-circle bg-white">
+                  <a :href="recipe.link" class="link-circle d-inline-block mb-2 text-center rounded-circle bg-white">
                     <i class="fa-solid fa-link"></i>
-                  </span>
+                  </a>
                   <h5 class="f-vidaloka">{{ recipe.title }}</h5>
                 </div>
-              </a>
+              </span>
             </div>
             
           </div>

@@ -43,7 +43,7 @@
 
       <div class="header-bottom text-center d-flex justify-content-center">
 
-        <ul class="d-none d-lg-flex flex-wrap justify-content-center">
+        <ul class="d-none d-lg-flex flex-wrap justify-content-center z-3">
           <li
             class="my-3"
             v-for="(section, index) in store.menu"
@@ -52,7 +52,7 @@
           </li>
         </ul>
 
-        <span class="d-flex align-items-center ms-4 mb-3 pe-3">
+        <span class="d-flex align-items-center ms-3 mb-3 pe-3">
           <div class="search">
             <input class="fw-bold" type="text" placeholder=" ">
             <div>
