@@ -11,7 +11,8 @@
 
     data() {
       return {
-        store
+        store,
+        activeMsg: 'popComments',
       }
     },
 
@@ -23,7 +24,21 @@
       getUserImagePath(imgPath) {
         return new URL(`../../assets/img/user-img/${imgPath}`, import.meta.url).href
       },
+
+      switchComments(tab) {
+        this.activeMsg = tab;
+      }
     },
+
+    computed: {
+      usersComments() {
+        if (this.activeMsg === 'popComments') {
+          return this.store.usersComments.popComments;
+        } else {
+          return this.store.usersComments.recentComments;
+        }
+      }
+    }
   }
 
 </script>
@@ -115,12 +130,19 @@
         </div>
 
         <div class="comments">
-          <span class="btn-comments active d-inline-block text-center border-end-0">Popular</span>
-          <span class="btn-comments d-inline-block text-center">Recent</span>
+          <span
+            @click="switchComments('popComments')"
+            :class="{ 'active': activeMsg === 'popComments' }"
+            class="btn-comments d-inline-block text-center border-end-0">Popular</span>
+
+          <span
+            @click="switchComments('recentComments')"
+            :class="{ 'active': activeMsg === 'recentComments' }"
+            class="btn-comments d-inline-block text-center">Recent</span>
 
           <div class="comments-wrapper">
 
-            <div v-for="comment in store.usersComments" :key="comment.id" class="comment-box d-flex">
+            <div v-for="comment in usersComments" :key="comment.id" class="comment-box d-flex">
               <div class="user-img d-flex align-items-center flex-shrink-0 pe-2">
                 <img class="rounded-circle" :src="getUserImagePath(comment.userImg)" alt="">
               </div>
@@ -256,6 +278,8 @@
       font-weight: bold;
       border: 1px solid $secondary-text;
       margin-bottom: 40px;
+      cursor: pointer;
+      font-family: "Vidaloka", serif;
       &.active {
         background-color: white;
       }
